@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Home | Domingo Mesa Jr.</title>
+    <title>Contact | Domingo Mesa Jr.</title>
 </head>
 <body>
     <header>
@@ -22,26 +22,23 @@
     </header>
     <main>
         <section>
-            <h1>Welcome! Have a look around!</h1>
-        </section>
-        <section>
-            <h2>Portfolio</h2>
-            <p>Here are some of the projects I have worked on.</p>
-            <div class="portfolio-item">
-                <img src="img/placeholder.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Project 1 description</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="img/placeholder.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Project 2 description</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="img/placeholder.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Project 3 description</p>
-            </div>
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me with any questions or comments.</p>
+            <form action="submit.php" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
     <footer>
