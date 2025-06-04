@@ -19,6 +19,31 @@ body {
     line-height: 1.6;
 }
 
+/* ---------- back‑to‑top button ---------- */
+#to-top{
+  position:fixed;
+  bottom:1.5rem;
+  right:1.5rem;
+  width:3rem;                /* perfect circle */
+  height:3rem;
+  border:none;
+  border-radius:50%;
+  background:var(--primary);
+  color:#fff;
+  font-size:1.5rem;          /* big arrow */
+  cursor:pointer;
+  opacity:0;                 /* start hidden */
+  visibility:hidden;
+  transition:opacity .25s ease, visibility .25s ease;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+#to-top.show{
+  opacity:1;
+  visibility:visible;
+}
+
+
 /* ---------- hero ---------- */
 header {
     background: var(--secondary);
