@@ -169,8 +169,14 @@
                 /* smooth scroll for anchor links */
                 document.querySelectorAll('nav a, header a[href^="#"]').forEach(a => {
                     a.addEventListener('click', e => {
-                        document.querySelector(a.getAttribute('href'))
-                            .scrollIntoView({ behavior: 'smooth' });
+                        e.preventDefault();
+                        const targetId = a.getAttribute('href');
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                            // Update URL hash after smooth scroll
+                            history.pushState(null, null, targetId);
+                        }
                     });
                 });
 
