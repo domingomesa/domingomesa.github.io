@@ -142,14 +142,16 @@
                 <p>boot.dev</p>
                 <a href="https://www.boot.dev/certificates/e3a9a689-0170-4bce-abd0-e49894bdeb79" target="_blank">View ↗︎</a>
             </div>
+        </div>
+    </section>
 
-            <!-- ===== CONTACT ===== -->
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Have a project or want to connect? Let's talk!</p>
-                <a class="btn" href="mailto:domingoamesa@gmail.com">Email Me</a>
-                <a class="btn" href="tel:+1-773-886-0286">Call/Text Me</a>
-            </section>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Have a project or want to connect? Let's talk!</p>
+        <a class="btn" href="mailto:domingoamesa@gmail.com">Email Me</a>
+        <a class="btn" href="tel:+1-773-886-0286">Call/Text Me</a>
+    </section>
 
             <!-- ===== FOOTER ===== -->
             <footer>
@@ -165,25 +167,17 @@
                 document.getElementById('year').textContent = new Date().getFullYear();
 
                 /* smooth scroll for anchor links */
-                document.querySelectorAll('nav a').forEach(a => {
+                document.querySelectorAll('nav a, header a[href^="#"]').forEach(a => {
                     a.addEventListener('click', e => {
-                        e.preventDefault();
                         document.querySelector(a.getAttribute('href'))
                             .scrollIntoView({ behavior: 'smooth' });
                     });
                 });
-            </script>
-            <script>
-                /* update footer year … existing code … */
 
-                /* smooth scroll for nav anchors … existing code … */
-
-                /* =======================
-                   back‑to‑top visibility + smooth scroll
-                ======================== */
+                /* back‑to‑top visibility + smooth scroll */
                 const toTopBtn = document.getElementById('to-top');
 
-                /* show / hide after 300 px */
+                /* show / hide after 300 px */
                 window.addEventListener('scroll', () => {
                     toTopBtn.classList.toggle('show', window.scrollY > 300);
                 });
@@ -191,6 +185,8 @@
                 /* smooth‑scroll to very top */
                 toTopBtn.addEventListener('click', () => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
+                    // Remove hash from URL
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
                 });
             </script>
 </body>
