@@ -118,6 +118,7 @@ section {
     max-width: 900px;
     margin: 4rem auto;
     padding: 0 1rem;
+    scroll-margin-top: 60px; /* offset for sticky nav */
 }
 
 section h2 {
