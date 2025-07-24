@@ -51,13 +51,6 @@ CSS is organized using a component-based approach:
 
 ## Development
 
-### Local Development
-
-```bash
-# Start local server
-npm run dev
-```
-
 ### File Loading Order
 
 Files are loaded in dependency order:
