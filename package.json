@@ -1,0 +1,30 @@
+{
+  "name": "domingo-mesa-portfolio",
+  "version": "2.0.0",
+  "description": "Personal portfolio website for Domingo Mesa Jr. Hosted by GitHub Pages.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "dev:watch": "python -m http.server 8000 & echo 'Server running at http://localhost:8000'",
+    "build": "echo 'Building static site...'",
+    "lint:js": "echo 'JavaScript linting would go here'",
+    "lint:css": "echo 'CSS linting would go here'",
+    "test": "echo 'Tests would go here'"
+  },
+  "keywords": [
+    "portfolio",
+    "software-engineer",
+    "python",
+    "javascript",
+    "go",
+    "sql"
+  ],
+  "author": "Domingo Mesa Jr.",
+  "license": "MIT",
+  "devDependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
